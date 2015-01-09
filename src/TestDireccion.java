@@ -30,7 +30,7 @@ public class TestDireccion {
             if (lin.length>1) {
                  dir = lin[1].split("\"")[2];
             }else{
-                System.out.println("Google Bloqueado");
+                //System.out.println("Google Bloqueado");
                 Thread.sleep(1000);
                 return obtieneDirecion(lat, lon);
                 
