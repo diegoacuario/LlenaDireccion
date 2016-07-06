@@ -25,21 +25,21 @@ public class TestDireccion {
             formatoJSON = obtenerDeURL("http://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lon + "&sensor=true_or_false");
             String lin[] = formatoJSON.split("formatted_address");
             String dir;
-            if (lin.length>1) {
-                 dir = lin[1].split("\"")[2];
-            }else{
+            if (lin.length > 1) {
+                dir = lin[1].split("\"")[2];
+            } else {
                 //System.out.println("Google Bloqueado");
                 Thread.sleep(1000);
                 return obtieneDirecion(lat, lon);
-                
-            }            
+
+            }
             return dir;
         } catch (Exception e) {
             try {
                 Thread.sleep(1000);
                 return obtieneDirecion(lat, lon);
             } catch (InterruptedException ex) {
-                return ex+"";
+                return ex + "";
             }
 
         }
